@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACHI SHOP'S — Premium Fashion Marketplace</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#" onclick="closeMobile()">Home</a>
+  <a href="#shop" onclick="closeMobile()">Shop</a>
+  <a href="#categories" onclick="closeMobile()">Categories</a>
+  <a href="#deals" onclick="closeMobile()">Deals</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <a class="nav-brand" href="#">ACHI SHOP'S</a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#deals">Deals</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme"></button>
+    <button class="nav-cart">🛒 Cart (0)</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-geo">
+    <div class="geo-shape"></div>
+    <div class="geo-shape"></div>
+    <div class="geo-shape"></div>
+    <div class="geo-shape"></div>
+  </div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span>New Collection 2025 — Now Live</span>
+    </div>
+
+    <span class="hero-brand">ACHI SHOP'S</span>
+
+    <p class="hero-welcome">Welcome to ACHI SHOP'S</p>
+    <p class="hero-tagline">You will find your clothes in our site</p>
+
+    <div class="hero-marketing">
+      <span class="mkt-pill gold">✦ Best Fashion Marketplace for Everyone</span>
+      <span class="mkt-pill">Discover Trendy Outfits at Affordable Prices</span>
+      <span class="mkt-pill">Free Shipping on Orders Over ৳2000</span>
+    </div>
+
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
+        Shop Now →
+      </button>
+      <button class="btn-outline" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">
+        Explore Collection
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">12K+</div>
+      <div class="stat-label">Products</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">98K+</div>
+      <div class="stat-label">Customers</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Avg Rating</div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-strip">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ── CATEGORIES ── -->
+<section id="categories">
+  <div class="section-inner">
+    <p class="section-label">Shop By Category</p>
+    <h2 class="section-title">Find Your Style</h2>
+    <p class="section-sub">Browse through our curated collections designed for every style and occasion.</p>
+
+    <div class="categories-grid">
+      <div class="cat-card">
+        <div class="cat-bg"></div>
+        <div class="cat-pattern"></div>
+        <div class="cat-icon-wrap">👔</div>
+        <div class="cat-arrow">→</div>
+        <div class="cat-info">
+          <div class="cat-name">Men</div>
+          <div class="cat-count">420+ Products</div>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-bg"></div>
+        <div class="cat-pattern"></div>
+        <div class="cat-icon-wrap">👗</div>
+        <div class="cat-arrow">→</div>
+        <div class="cat-info">
+          <div class="cat-name">Women</div>
+          <div class="cat-count">680+ Products</div>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-bg"></div>
+        <div class="cat-pattern"></div>
+        <div class="cat-icon-wrap">🧒</div>
+        <div class="cat-arrow">→</div>
+        <div class="cat-info">
+          <div class="cat-name">Kids</div>
+          <div class="cat-count">310+ Products</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PRODUCTS ── -->
+<section id="shop" style="background: var(--bg2);">
+  <div class="section-inner">
+    <div class="products-header">
+      <div>
+        <p class="section-label">Featured Products</p>
+        <h2 class="section-title">Trending Now</h2>
+      </div>
+      <a href="#" class="view-all">View All →</a>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="setFilter(this,'all')">All</button>
+      <button class="filter-btn" onclick="setFilter(this,'men')">Men</button>
+      <button class="filter-btn" onclick="setFilter(this,'women')">Women</button>
+      <button class="filter-btn" onclick="setFilter(this,'kids')">Kids</button>
+      <button class="filter-btn" onclick="setFilter(this,'sale')">On Sale</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- Injected by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ── DEALS ── -->
+<section id="deals">
+  <div class="deals-inner">
+    <div>
+      <div class="deal-badge">🔥 Limited Time Deal</div>
+      <h2 class="deal-title">Up to <em>50% Off</em><br>Summer Collection</h2>
+      <p class="deal-desc">Don't miss our biggest sale of the season. Premium fashion brands at unbeatable prices — only while stocks last!</p>
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><div class="cd-num" id="cdH">08</div><div class="cd-label">Hours</div></div>
+        <div class="cd-box"><div class="cd-num" id="cdM">45</div><div class="cd-label">Mins</div></div>
+        <div class="cd-box"><div class="cd-num" id="cdS">00</div><div class="cd-label">Secs</div></div>
+      </div>
+      <button class="btn-primary">Grab the Deal →</button>
+    </div>
+    <div class="deal-visual">
+      👜
+      <div class="deal-tag">50% OFF</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section style="background: var(--bg2);">
+  <div class="section-inner">
+    <p class="section-label">Customer Love</p>
+    <h2 class="section-title">What They Say</h2>
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Absolutely love the quality! Got a dress for Eid and received so many compliments. The fabric feels premium and fits perfectly."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div><div class="testi-name">Nadia Islam</div><div class="testi-role">Verified Buyer · Dhaka</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Blazing fast delivery and the packaging was so elegant. ACHI SHOP'S has become my go-to for fashion. Highly recommended!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div><div class="testi-name">Rafiq Hossain</div><div class="testi-role">Verified Buyer · Chittagong</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Great collection for kids! Found adorable outfits and the sizes were spot-on. Will definitely be shopping here again for the whole family."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div><div class="testi-name">Sumaiya Begum</div><div class="testi-role">Verified Buyer · Sylhet</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEWSLETTER ── -->
+<div class="newsletter" id="contact">
+  <div class="newsletter-inner">
+    <p class="section-label" style="text-align:center;">Stay In The Loop</p>
+    <h2 class="newsletter-title">Get Exclusive Deals First</h2>
+    <p class="newsletter-sub">Subscribe and get 10% off your first order. New arrivals, flash sales and style guides delivered to your inbox.</p>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="Your email address" id="emailInput">
+      <button class="btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+    </div>
+    <p id="subMsg" style="margin-top:1rem; font-size:0.82rem; color:var(--accent); display:none;">✓ You're in! Check your inbox for a welcome gift.</p>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">ACHI SHOP'S</div>
+      <p class="footer-desc">Bangladesh's most loved fashion marketplace. Bringing trendy, affordable styles for the whole family, right to your doorstep.</p>
+      <div class="social-links">
+        <a class="social-btn" href="#" title="Facebook">📘</a>
+        <a class="social-btn" href="#" title="Instagram">📸</a>
+        <a class="social-btn" href="#" title="TikTok">🎵</a>
+        <a class="social-btn" href="#" title="YouTube">▶️</a>
+        <a class="social-btn" href="#" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Men's Fashion</a></li>
+        <li><a href="#">Women's Fashion</a></li>
+        <li><a href="#">Kids' Wear</a></li>
+        <li><a href="#">Accessories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Size Guide</a></li>
+        <li><a href="#">Track Order</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 ACHI SHOP'S. All rights reserved. Made with ❤️ in Bangladesh.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
